@@ -4,9 +4,8 @@
 # hpcteditors/app/slurm.py
 
 
-from ..lib.base import EOF, ParsingError, Matcher, RecordNode, StringNode
-from ..lib.line import LineParser, LineEditor, LinesNode
-
+from ..lib.base import EOF, Matcher, ParsingError, RecordNode, StringNode
+from ..lib.line import LineEditor, LineParser, LinesNode
 
 # simple class definitions
 CommentNode = type("CommentNode", (StringNode,), {})

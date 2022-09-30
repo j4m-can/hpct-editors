@@ -4,8 +4,8 @@
 # hpcteditors/base/line/parser.py
 
 
-from .node import BlankLineNode, CommentLineNode, LineNode, LinesNode
 from ..base import EOF, Parser
+from .node import BlankLineNode, CommentLineNode, LineNode, LinesNode
 
 
 class LineParser(Parser):

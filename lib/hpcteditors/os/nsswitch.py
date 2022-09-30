@@ -6,17 +6,16 @@
 
 from ..lib.base import (
     EOF,
-    ParsingError,
     ContainerNode,
+    ParentOfMatcher,
+    ParsingError,
     RecordNode,
     StringNode,
     TemplateStringNode,
-    ParentOfMatcher,
     TypeMatcher,
     TypeValueMatcher,
 )
-from ..lib.line import LineEditor, LineParser, BlankLineNode, CommentLineNode, LinesNode
-
+from ..lib.line import BlankLineNode, CommentLineNode, LineEditor, LineParser, LinesNode
 
 # simple class definitions
 ActionNode = type("ActionNode", (TemplateStringNode,), {"template": "[{value}]"})

@@ -6,15 +6,14 @@
 
 from ..lib.base import (
     EOF,
-    ParsingError,
-    remove_child_nodes,
     ParentOfMatcher,
-    TypeValueMatcher,
+    ParsingError,
     RecordNode,
     StringNode,
+    TypeValueMatcher,
+    remove_child_nodes,
 )
-from ..lib.line import LineEditor, LineParser, BlankLineNode, CommentLineNode, LinesNode
-
+from ..lib.line import BlankLineNode, CommentLineNode, LineEditor, LineParser, LinesNode
 
 # simple class definitions
 FileNode = type("FileNode", (StringNode,), {})

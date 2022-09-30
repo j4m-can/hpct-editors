@@ -8,17 +8,16 @@ import re
 
 from ..lib.base import (
     EOF,
-    ParsingError,
-    remove_child_nodes,
     CommaJoinNode,
     ContainerNode,
+    ParentOfMatcher,
+    ParsingError,
     RecordNode,
     StringNode,
-    ParentOfMatcher,
     TypeValueMatcher,
+    remove_child_nodes,
 )
-from ..lib.line import LineEditor, LineParser, BlankLineNode, CommentLineNode, LinesNode
-
+from ..lib.line import BlankLineNode, CommentLineNode, LineEditor, LineParser, LinesNode
 
 CLIENTOPTIONS_RE = r"""(?P<client>[^(]+)(\((?P<options>[a-zA-Z0-9_,"]+)\))?"""
 

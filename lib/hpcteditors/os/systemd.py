@@ -6,17 +6,16 @@
 
 from ..lib.base import (
     EOF,
-    ParsingError,
-    remove_child_nodes,
     ParentOfMatcher,
-    TypeMatcher,
-    TypeValueMatcher,
+    ParsingError,
     RecordNode,
     StringNode,
     TemplateStringNode,
+    TypeMatcher,
+    TypeValueMatcher,
+    remove_child_nodes,
 )
-from ..lib.line import LineEditor, LineParser, BlankLineNode, CommentLineNode, LinesNode
-
+from ..lib.line import BlankLineNode, CommentLineNode, LineEditor, LineParser, LinesNode
 
 HeaderNode = type("HeaderNode", (TemplateStringNode,), {"template": "[{value}]"})
 NameNode = type("NameNode", (StringNode,), {})
