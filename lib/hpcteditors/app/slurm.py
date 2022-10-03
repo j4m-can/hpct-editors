@@ -155,3 +155,8 @@ class SlurmConfFileEditor(LineEditor):
         """Convenience: Add line."""
         p = self.get_parser(line)
         self.root.add(p.parse_slurmrecord())
+
+    def add_lines(self, lines):
+        for line in lines:
+            p = self.get_parser(line)
+            self.root.add(p.parse_slurmrecord())
