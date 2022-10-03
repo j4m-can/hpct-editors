@@ -4,9 +4,8 @@
 # hpcteditors/app/slurm.py
 
 
-from ..lib.base import EOF, ParsingError, Matcher, RecordNode, StringNode
-from ..lib.line import LineParser, LineEditor, LinesNode
-
+from ..lib.base import EOF, Matcher, ParsingError, RecordNode, StringNode
+from ..lib.line import LineEditor, LineParser, LinesNode
 
 # simple class definitions
 CommentNode = type("CommentNode", (StringNode,), {})
@@ -156,3 +155,8 @@ class SlurmConfFileEditor(LineEditor):
         """Convenience: Add line."""
         p = self.get_parser(line)
         self.root.add(p.parse_slurmrecord())
+
+    def add_lines(self, lines):
+        for line in lines:
+            p = self.get_parser(line)
+            self.root.add(p.parse_slurmrecord())

@@ -11,7 +11,6 @@ sys.path.insert(0, os.path.realpath("../../lib"))
 
 from hpcteditors.os.freedesktop import FreeDesktopConfFileEditor
 
-
 if __name__ == "__main__":
     sep = "----------"
 
